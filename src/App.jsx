@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import AddForm from "./components/AddForm";
-import ListCard from "./components/ListCard";
+import Todo from "./components/Todo";
 import "./App.scss";
 
-function App({ todos }) {
+function App() {
   const [todoData, setTodoData] = useState([
     {
       id: 1,
@@ -19,17 +19,14 @@ function App({ todos }) {
       isDone: true,
     },
   ]);
-
+  console.log(todoData);
   /*  map으로 배열 뽑고 filter로 isDone에 따라서 가르고 */
 
   return (
     <div className="App">
       <Header />
-      <AddForm setTodoData={setTodoData} />
-      <p className="pstyle">Working.. 🔥🎉</p>
-      <ListCard todoData={todoData} key={todoData.id} />
-      <p className="pstyle">Done..! 🎉</p>
-      <ListCard />
+      <AddForm todoData={todoData} setTodoData={setTodoData} />
+      <Todo todoData={todoData} setTodoData={setTodoData} />
     </div>
   );
 }
