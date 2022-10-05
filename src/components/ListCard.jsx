@@ -18,8 +18,13 @@ function ListCard({ todo, todoData, setTodoData }) {
 
   const done = () => {
     const newArray2 = todoData.map((x) => {
-      if (x.id === id) {
-        return setTodoData();
+      if (x.id === id)
+        return {
+          ...x,
+          isDone: !x.isDone,
+        };
+      else {
+        return { ...x };
       }
     });
     setTodoData(newArray2);
