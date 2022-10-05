@@ -31,7 +31,7 @@ function ListCard({ todo, todoData, setTodoData }) {
   };
 
   return (
-    <div>
+    <div className="ListCard">
       <div className="card w-96 bg-neutral text-neutral-content">
         <div className="card-body items-center text-center">
           <h2 className="card-title text-white" name="title">
@@ -40,7 +40,7 @@ function ListCard({ todo, todoData, setTodoData }) {
           <p className="text-white" name="content">
             {content}
           </p>
-          <div className="card-actions justify-end">
+          <div className="card-actions mt-[20px] mb-[-25px] justify-end">
             <button className="btn bg-red-600" onClick={drop}>
               Delete
             </button>

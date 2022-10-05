@@ -61,7 +61,7 @@ function AddForm({ setTodoData, todoData }) {
         placeholder="Type here"
         onChange={onChange}
       />
-      <button type="button" className="btn glass" onClick={onCreate}>
+      <button type="button" className="btn glass ml-[10px]" onClick={onCreate}>
         Add Item
       </button>
     </div>

@@ -7,36 +7,40 @@ function Todo({ todoData, setTodoData }) {
   return (
     <div className="Todo">
       <p className="pstyle">Working.. 🔥</p>
-      {todoData.map((todo) => {
-        if (todo.isDone == 0) {
-          return (
-            <ListCard
-              todo={todo}
-              key={todo.id}
-              todoData={todoData}
-              setTodoData={setTodoData}
-            />
-          );
-        } else {
-          return null;
-        }
-      })}
+      <div className="Todo list">
+        {todoData.map((todo) => {
+          if (todo.isDone == 0) {
+            return (
+              <ListCard
+                todo={todo}
+                key={todo.id}
+                todoData={todoData}
+                setTodoData={setTodoData}
+              />
+            );
+          } else {
+            return null;
+          }
+        })}
+      </div>
 
       <p className="pstyle">Done..! 🎉</p>
-      {todoData.map((todo) => {
-        if (todo.isDone == 1) {
-          return (
-            <ListCard
-              todo={todo}
-              key={todo.id}
-              todoData={todoData}
-              setTodoData={setTodoData}
-            />
-          );
-        } else {
-          return null;
-        }
-      })}
+      <div className="Todo list">
+        {todoData.map((todo) => {
+          if (todo.isDone == 1) {
+            return (
+              <ListCard
+                todo={todo}
+                key={todo.id}
+                todoData={todoData}
+                setTodoData={setTodoData}
+              />
+            );
+          } else {
+            return null;
+          }
+        })}
+      </div>
     </div>
   );
 }
